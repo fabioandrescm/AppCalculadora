@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/cero"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="0"
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/coma"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/cero"
+        android:gravity="center"
+        android:text=","
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/igual"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/coma"
+        android:gravity="center"
+        android:text="="
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/uno"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_above="@id/cero"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="1"
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/dos"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_above="@id/coma"
+        android:layout_toRightOf="@id/uno"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="2"
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/tres"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_above="@id/igual"
+        android:layout_toRightOf="@id/dos"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="3"
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/cuatro"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_above="@id/uno"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="4"
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/cinco"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_above="@id/dos"
+        android:layout_toRightOf="@id/cuatro"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="5"
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/seis"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_above="@id/tres"
+        android:layout_toRightOf="@id/cinco"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="6"
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/siete"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_above="@id/cuatro"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="7"
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/ocho"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_above="@id/cinco"
+        android:layout_toRightOf="@id/siete"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="8"
+        android:textSize="@dimen/tamanioTexto" />
+
+    <TextView
+        android:id="@+id/nueve"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="@dimen/alto"
+        android:layout_above="@id/seis"
+        android:layout_toRightOf="@id/ocho"
+        android:gravity="center"
+        android:onClick="numero"
+        android:text="9"
+        android:textSize="@dimen/tamanioTexto" />
+    <LinearLayout
+        android:id="@+id/operadores"
+        android:layout_width="@dimen/ancho"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/nueve"
+        android:layout_below="@id/resultado">
+        <ImageView
+            android:id="@+id/clear"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="btnborrar"
+            android:src="@drawable/ic_borrar"
+            android:padding="25dp"/>
+        <TextView
+            android:id="@+id/div"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="/"
+            android:onClick="calcular"
+            android:textSize="@dimen/tamanioTexto"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/multiply"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="X"
+            android:onClick="calcular"
+            android:textSize="@dimen/tamanioTexto"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/rest"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="-"
+            android:onClick="calcular"
+            android:textSize="@dimen/tamanioTexto"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/sum"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="+"
+            android:onClick="calcular"
+            android:textSize="@dimen/tamanioTexto"
+            android:gravity="center"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_200"
+        android:layout_toRightOf="@id/operadores"
+        android:layout_below="@id/resultado">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/nueve"
+        android:gravity="right|center_vertical"
+        android:paddingRight="25dp"
+        android:text=""
+        android:textSize="60sp" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_mas"
+        android:layout_alignParentRight="true"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="DEG"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/nueve"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_linea" />
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
